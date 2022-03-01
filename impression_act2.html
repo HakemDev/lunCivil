@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Nouvelle acte</title>
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+         .sidebar-divider {
+            margin: 0 1rem 0 !important;
+        }
+        
+        .xra{
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-gap: 1em;
+            margin: 1rem;
+        }
+        .div{
+            font-weight: bold;
+        }
+        .xraaa{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-gap: 1em;
+        }
+        .rad{
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-gap: 1em;
+        }
+        .rad1{
+            display: grid;
+            grid-template-columns: 35% 65%;
+            grid-gap: 1em;
+        }
+        .rig{
+            float: right;
+        }
+        .lef{
+            float: left;
+        }
+        .aa{
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-gap: 1em;
+        }
+        .aaa{
+            display: grid;
+            grid-template-columns:41% 59% ;
+            grid-gap: 1em;
+        }
+        .bb{
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-gap: 1em;
+        }
+        .bsb{
+             display: grid;
+            grid-template-columns: 80% 20%;
+            grid-gap: 1em;
+        }
+        .gg,.bbb{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            grid-gap: 1em;
+        }
+    </style>
+</head>
+
+<body >
+    
+        
+   <div class="d-flex justify-content-between">
+       
+      <!--**Information sur le nouveau né et registre**-->
+      <div  class="right  "> 
+          <div>
+              <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow d-flex justify-content-between">
+                    <div>
+                         <a href="#" class="mr-auto d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                             <i class="fas fa-sm text-white-50"></i> 
+                             تسجيل الخروج
+                          </a>
+                     </div>
+                     <div><span class="mr-2 d-none d-lg-inline text-gray-600 small">NOM DE L'AGENT</span></div>
+
+                </nav>
+          </div>
+          <div class=" pr-3 pl-3">
+                <!--Verifaction et imression-->
+                <a href="#" class="btn btn-warning mr-2 mb-2"> 
+                    <i class="fa fa-angle-double-left pr-2"></i>
+                    الرجوع إلى الإستقبال
+                </a>
+                <div class="mt-5 d-flex justify-content-between m-3 float-end row">
+                        <button class="btn btn-danger verifier">مراقبة</button>
+                        
+                        <button class="btn btn-light mr-1 fontt disabled">
+                            <i class="material-icons pt-1"style='font-size:36px' >print</i>
+                            <i class='far fa-angry ' style='font-size:36px' id="faan"></i>
+                        </button>                    
+                        <input class="btn btn-secondary mr-1 disabled imprimer" type="submit"  value="طباعة" > 
+                        
+                </div>
+                <!--Information sur le registre-->
+                <div class="card ">
+                        <div class="card-header fw-bold bg-gray-300">
+                            <span class="right float-end  fw-bold">  :معلومات عن السجل </span> 
+                        </div>
+                        <div class="card-body">
+                        <form class="d-flex justify-content-between g-3 needs-validation" novalidate>
+                                <div class="col-md-2 ">
+                                    <button class="btn btn-primary bg-success" type="submit"><i class="fas fa-search"></i> بحث </button>
+                                </div>
+                                
+                                    <input type="number" class="form-control col-md-2" id="validationCustom02" min="1" value="" required>
+                                    <div class="valid-feedback">
+                                    Looks good!
+                                    </div>
+                                     <label for="validationCustom02" class="form-label float-end col-md-2">: رقم الرسم </label>
+
+                            
+                            
+                                    <select class="form-select col-md-2" id="validationCustom04" required>
+                                        <option selected disabled value="">1</option>
+                                        <option>2</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                    Please select a valid state.
+                                    </div>
+                                
+                                    <label for="validationCustom04" class="form-label float-end col-md-1"">: الجزء</label>
+
+                                    <input type="number" class="form-control col-md-2" id="validationCustom05" max="2300" min="1956" value="2022" required>
+                                    <div class="invalid-feedback">
+                                    المرجو إدخال السنة
+                                    </div>
+                                  <label for="validationCustom05" class="form-label float-end col-md-1">: السنة</label>
+
+                                
+                        </form>
+                            
+                        </div>
+                </div>
+                <!--Information sur le nouveau né-->
+                <div class="card mt-2 mb-2">
+                        <div class="card-header fw-bold bg-gray-300">
+                            <span class="right float-end  ">: معلومات عن المولود </span> 
+                        </div>
+                        <div class="card-body">
+                        <div class="row g-3  needs-validation" >
+                                <div class="col-md-3">
+                                    <label for="validationCustomw1" class="form-label ">Prenom :</label>
+                                    <input type="text" class="form-control" id="validationCustomw1" required>
+                                    <div class="valid-feedback">
+                                    Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="validationCustom02w2" class="form-label float-end">: الإسم</label>
+                                    <input type="text" class="form-control" id="validationCustom02w2" required>
+                                    <div class="valid-feedback">
+                                    Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="validationCustom02w3" class="form-label ">Nom :</label>
+                                    <input type="text" class="form-control" id="validationCustom02w3" required>
+                                    <div class="valid-feedback">
+                                    Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="validationCustom02w4" class="form-label float-end">: النسب</label>
+                                    <input type="text" class="form-control" id="validationCustom02w4" required>
+                                    <div class="valid-feedback">
+                                    Looks good!
+                                    </div>
+                                </div>
+                                <div class=" rad">
+                                    <div class="row pl-5">
+                                           <span class="col-md-2"></span>
+                                           <div class="form-check col-md-2 ">
+                                                <input class="form-check-input " type="radio" name="genome" id="genomo" value="لا" checked>
+                                                <label class="form-check-label" for="genomo">
+                                                    لا
+                                                </label>
+                                            </div>
+                                            <div class="form-check col-md-2 ">
+                                                <input class="form-check-input" type="radio" name="genome" id="genomn" value="نعم">
+                                                <label class="form-check-label" for="genomn">
+                                                    نعم
+                                                </label>
+                                            </div>
+                                            <label for="validationCustom02" class="form-label col-md-5">: توأم</label>
+                                    
+                                    </div>
+                                    
+                                        <div class=" row pl-5">
+                                            <div class="form-check col-md-2 ">
+                                                <input class="form-check-input " type="radio" name="genre" id="genrem" value="ذكر" checked>
+                                                <label class="form-check-label" for="genrem">
+                                                    ذكر
+                                                </label>
+                                            </div>
+                                            <div class="form-check col-md-2">
+                                                <input class="form-check-input" type="radio" name="genre" id="genref" value="أنثى">
+                                                <label class="form-check-label" for="genref">
+                                                    أنثى
+                                                </label>
+                                            </div>
+                                            <div class="row col-md-8">
+                                                   <span class="col-md-4"></span>
+                                                    <input type="number" class="form-control col-md-4" id="validationCustom02" min="1" required>
+                                                    <label for="validationCustom02" class="form-label float-end col-md-4 ">: الرتبة</label>
+                                                    <div class="valid-feedback">
+                                                    Looks good!
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        
+                                   
+                                    
+                                    
+                                </div>
+                              
+                              
+                                <div class="row mt-2  d-flex justify-content-end">
+                                    
+                                   
+                                    <label class="form-check-label col-md-3" for="checknee">
+                                                                             <input class="form-check-input col-md- " type="checkbox" name="checkne" id="checknee" value="ذكر" >
+
+                                    : السنة فقط 
+                                    </label>
+                                    
+
+                                    <input type="date" class="form-control col-md-4" id="validationCustom02aa" min="1" required>
+                                    <label for="validationCustom02aa" class="form-label float-end col-md-2">: تاريخ الإزدياد</label>
+                                    <div class="valid-feedback">
+                                    تاريخ الازدياد
+                                    </div>
+                                </div>
+                                   
+                                
+
+                                <div class="col-md-6">
+                                    <label for="validactionCustom02" class="form-label ">Grigor</label>
+                                    <input type="text" class="form-control" id="validactionCustom02" required>
+                                    <div class="valid-feedback">
+                                    Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationcCustom02" class="form-label float-end">: ميلادي </label>
+                                    <input type="text" class="form-control" id="validationcCustom02" required>
+                                    <div class="valid-feedback">
+                                    Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationCustomc02" class="form-label ">Hijri :</label>
+                                    <input type="text" class="form-control" id="validationCustomc02" required>
+                                    <div class="valid-feedback">
+                                    Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationCustom0c2" class="form-label float-end">: الهجري</label>
+                                    <input type="text" class="form-control" id="validationCustom0c2" required>
+                                    <div class="valid-feedback">
+                                    Looks good!
+                                    </div>
+                                </div>
+                            
+
+                                
+                            
+                            <div class="col-md-6 mb-3 aa">
+                                    <input type="text" class="form-control " id="validationCustommmm"  required>
+                                    <label for="validationCustommmm" class="form-label " style="float: right;">: مكان الإزدياد</label>
+                            </div>
+                            <div class="col-md-6 mb-3 aaa">
+                                <label for="validationCustommm" class="form-label " style="float: right;">Lieu de Naissance :</label>
+                                    <input type="text" class="form-control " id="validationCustommm"  required>
+                                    
+                            </div>
+                            <div class="row col-md-12 mb-3 float-end ">
+                                <span class="col-md-4"></span>
+                                     <input type="time" class="form-control col-md-6 float-end" id="vslidationCustomm"  required>
+
+                                    <label for="vsalidationCustomm" class="form-label col-md-2 text-end" style="float: right;"> 
+                                        : ساعة الإزدياد
+                                    </label>
+                            </div>
+                            <div class="col-md-6 mb-3 bb">
+                                    <input type="text" class="form-control " id="validationCustommmmq"  required>
+                                    <label for="validationCustommmmq" class="form-label " style="float: right;">: موجز</label>
+                            </div>
+                            <div class="col-md-6 mb-3 bbb">
+                                <label for="validationCustommmqq" class="form-label " style="float: right;">Extrait :</label>
+                                <input type="text" class="form-control " id="validationCustommmqq"  required>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+                <!--button save and return to main page-->
+                <div  class="xraa pr-2">
+                    <div class="xraaa">
+                        <!--Information sur la mére-->
+                        <div class="ham">
+                            <div class="card ">
+                                    <div class="card-header fw-bold bg-gray-300">
+                                        <span class="right float-end  fw-bold">  : معلومات عن الأم </span> 
+                                    </div>
+                                    <div class="card-body">  
+                                        <div class=" rad">
+                                            <div class="gg">
+                                                    <div class="form-check ">
+                                                        <input class="form-check-input " type="checkbox" name="exampleRadios" id="exampleRadios1p2" value="متوفية" >
+                                                        <label class="form-check-label" for="exampleRadios1p2">
+                                                            متوفية
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check  bsb ">
+                                                        <input class="form-control" type="text" name="exampletext" id="exampleRadios2p1" value="">
+                                                        <label class="form-check-label float-end" for="exampleRadios2p1">
+                                                            بن
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <span class="col-md-3"></span>
+                                                <input type="text" class="form-control col-md-5" id="validationCustom02p3"  required>
+                                                <label for="validationCustom02p3" class="form-label float-end col-md-4">:إسم الأم</label>
+                                                <div class="valid-feedback">
+                                                Looks good!
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="pere row mb-3">
+                                            
+                                                <label class="col-md-4" for="validationCustom02p4">Prenom mére :</label>
+                                                <input type="text " id="validationCustom02p4" class=" form-control col-md-3">
+                                            
+                                                <label class="col-md-3" for="validationCustom02p5">Fille de </label>
+                                                <input type="text form-control" id="validationCustom02p5" class=" form-control col-md-2">
+                                        </div>
+                                        <div class="row mb-3 ">
+                                            <input type="text" class="form-control col-md-8" id="validationCustommmmp6"  required>
+                                            <label for="validationCustommmmp6" class="form-label col-md-4" style="float: right;">: مكان الإزدياد</label>
+                                        </div>
+                                        <div class="row mb-3 ">
+                                            <label for="validationCustommmp7" class="form-label col-md-4" style="float: left;">Lieu Naissance :</label>
+                                            <input type="text" class="form-control col-md" id="validationCustommmp7"  required>
+                                                
+                                        </div>
+                                        <div class="row mb-3 ">
+                                            <label for="validationCustommmp8" class="form-label col-md-3" style="float: left;">Nationalité :</label>
+                                            <input type="text" class="form-control col-md-3 pl-1" id="validationCustommmp8"  required>
+                                            <input type="text" class="form-control col-md-3" id="validationCustommmmp11"  required>
+                                            <label for="validationCustommmmp11" class="form-label col-md-3" style="float: right;">: الجنسية</label>    
+                                        </div>
+                                        <div class="row mb-3 ">
+                                            <label for="validationCustommmp9" class="form-label col-md-3" style="float: left;">Profession :</label>
+                                            <input type="text" class="form-control col-md-3" id="validationCustommmp9"  required>
+                                            <input type="text" class="form-control col-md-3" id="validationCustommmmp10"  required>
+                                            <label for="validationCustommmmp10" class="form-label col-md-3" style="float: right;">: المهنة</label>  
+                                        </div>
+
+                                        <div class=" rad1">
+                                        <div clas="gg ">
+                                            <div class="form-check rig  " style="padding-right: 1rem;">
+                                                    <input class="form-check-input " type="checkbox" name="exampleRadios" id="exampleRadios1" value="ذكر" >
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                    : السنة فقط 
+                                                    </label>
+                                                </div>
+                                            
+                                            
+                                    </div>
+                                    <div class="row">
+                                            <input type="date" class="form-control col-md-6" id="validationCustom02" min="1" required>
+                                                <label for="validationCustom02" class="form-label float-end col-md-6">: تاريخ الإزدياد</label>
+                                            <div class="valid-feedback">
+                                            تاريخ الازدياد
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <label for="validationCustom02" class="form-label ">Grigor</label>
+                                        <input type="text" class="form-control" id="validationCustom02" required>
+                                        <div class="valid-feedback">
+                                        Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="validationCustom02" class="form-label float-end">: ميلادي </label>
+                                        <input type="text" class="form-control" id="validationCustom02" required>
+                                        <div class="valid-feedback">
+                                        Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="validationCustom02" class="form-label ">Hijri :</label>
+                                        <input type="text" class="form-control" id="validationCustom02" required>
+                                        <div class="valid-feedback">
+                                        Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="validationCustom02" class="form-label float-end">: الهجري</label>
+                                        <input type="text" class="form-control" id="validationCustom02" required>
+                                        <div class="valid-feedback">
+                                        Looks good!
+                                        </div>
+                                    </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <!--Information sur le pére-->
+                        <div class="has">
+                            <div class="card ">
+                                    <div class="card-header fw-bold bg-gray-300">
+                                        <span class="right float-end  fw-bold">  : معلومات عن الأب</span> 
+                                    </div>
+                                    <div class="card-body">
+                                        <div class=" rad">
+                                            <div class="gg">
+                                                    <div class="form-check ">
+                                                        <input class="form-check-input " type="checkbox" name="checc" id="checkpere" value="ذكر" >
+                                                        <label class="form-check-label" for="checkpere">
+                                                            متوفي
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check  bsb ">
+                                                        <input class="form-control" type="text" name="exampletext" id="exampleRadios2p1" value="">
+                                                        <label class="form-check-label float-end" for="exampleRadios2p1">
+                                                            بن
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <span class="col-md-3"></span>
+                                                <input type="text" class="form-control col-md-5" id="validationCustom02p3"  required>
+                                                <label for="validationCustom02p3" class="form-label float-end col-md-4">: اسم الأب</label>
+                                                <div class="valid-feedback">
+                                                Looks good!
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="pere row mb-3">
+                                            
+                                                <label class="col-md-4" for="validationCustom02p4">Prenom pére :</label>
+                                                <input type="text " id="validationCustom02p4" class=" form-control col-md-3">
+                                            
+                                                <label class="col-md-2" for="validationCustom02p5">Fils de </label>
+                                                <input type="text form-control" id="validationCustom02p5" class=" form-control col-md-3">
+                                        </div>
+                                        <div class="row mb-3 ">
+                                            <input type="text" class="form-control col-md-8" id="validationCustommmmp6"  required>
+                                            <label for="validationCustommmmp6" class="form-label col-md-4" style="float: right;">: مكان الإزدياد</label>
+                                        </div>
+                                        <div class="row mb-3 ">
+                                            <label for="validationCustommmp7" class="form-label col-md-4" style="float: left;">Lieu Naissance :</label>
+                                            <input type="text" class="form-control col-md" id="validationCustommmp7"  required>
+                                                
+                                        </div>
+                                        <div class="row mb-3 ">
+                                            <label for="validationCustommmp8" class="form-label col-md-3" style="float: left;">Nationalité :</label>
+                                            <input type="text" class="form-control col-md-3 pl-1" id="validationCustommmp8"  required>
+                                            <input type="text" class="form-control col-md-3" id="validationCustommmmp11"  required>
+                                            <label for="validationCustommmmp11" class="form-label col-md-3" style="float: right;">: الجنسية</label>    
+                                        </div>
+                                        <div class="row mb-3 ">
+                                            <label for="validationCustommmp9" class="form-label col-md-3" style="float: left;">Profession :</label>
+                                            <input type="text" class="form-control col-md-3" id="validationCustommmp9"  required>
+                                            <input type="text" class="form-control col-md-3" id="validationCustommmmp10"  required>
+                                            <label for="validationCustommmmp10" class="form-label col-md-3" style="float: right;">: المهنة</label>  
+                                        </div>
+
+                                        <div class=" rad1">
+                                        <div clas="gg ">
+                                            <div class="form-check rig  " style="padding-right: 1rem;">
+                                                    <input class="form-check-input " type="checkbox" name="exampleRadios" id="exampleRadios1" value="ذكر" >
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                    : السنة فقط 
+                                                    </label>
+                                                </div>
+                                            
+                                            
+                                    </div>
+                                    <div class="row">
+                                            <input type="date" class="form-control col-md-6" id="validationCustom02" min="1" required>
+                                                <label for="validationCustom02" class="form-label float-end col-md-6">: تاريخ الإزدياد</label>
+                                            <div class="valid-feedback">
+                                            تاريخ الازدياد
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <label for="validationCustom02" class="form-label ">Grigor</label>
+                                        <input type="text" class="form-control" id="validationCustom02" required>
+                                        <div class="valid-feedback">
+                                        Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="validationCustom02" class="form-label float-end">: ميلادي </label>
+                                        <input type="text" class="form-control" id="validationCustom02" required>
+                                        <div class="valid-feedback">
+                                        Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="validationCustom02" class="form-label ">Hijri :</label>
+                                        <input type="text" class="form-control" id="validationCustom02" required>
+                                        <div class="valid-feedback">
+                                        Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="validationCustom02" class="form-label float-end">: الهجري</label>
+                                        <input type="text" class="form-control" id="validationCustom02" required>
+                                        <div class="valid-feedback">
+                                        Looks good!
+                                        </div>
+                                    </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--information de plus-->
+                    <div class="mt-3">
+                        <div class="card">
+                                <h5 class="card-header  fw-bold bg-gray-300">
+                                    <span class="right float-end  "> : معلومات إضافية</span>  
+                                </h5>
+                                <div class="card-body">
+                                    <div class="row mb-3">
+                                        <input type="text " class="col-md-3 form-control" id="validationCustommmmp10">
+                                        <label class="col-md-2 form-label" for="validationCustommmmp10">التابع ل</label>
+                                        <input type="text" class="col-md-5  form-control" id="validationCustommmmp10">
+                                        <label class="col-md-2 form-label" for="validationCustommmmp10">الساكنان ب</label>                             
+                                    </div>
+                                    <div class="row mb-3">
+                                        <span class="col-md-3"></span>
+                                        <label class="col-md-2 form-label" for="validationCustommmmp10">Adresse parents :</label>
+                                        <input type="text" class="col-md-5  form-control" id="validationCustommmmp10">
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!--Information sur la déclaration-->
+                    <div class="card">
+                            <h5 class="card-header bg-gray-300">
+                                <span class="right float-end  fw-bold">
+                                        : معلومات عن التصريح
+                                </span>
+                            </h5>
+                            <div class="card-body row">
+                                <div class="col-md-5">
+                                    <span class="col-md-3 float-end" for="exampleFormControlTextarea1">: تصريح</span>
+                                <textarea class="form-control col-md-9 mb-2" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <span class="col-md-4 float-start" for="exampleFormControlTextarea1">Déclaration :</span>
+                                <textarea class="form-control col-md-8" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="date" class="form-control d-inline-flex col-md-4 " id="dare">
+                                    <span class="col-md-2 float-middle" for="dare">: تاريخ التحرير</span>
+                                    <input type="radio" id="exampleRadiosse1" name="aaz" value="تصريح"> 
+                                    <label class="form-check-label" for="exampleRadiosse1">
+                                        تصريح
+                                    </label>
+                                    <input type="radio" id="exampleRadiossea1" name="aaz" value="حكم"> 
+                                    <label class="form-check-label " for="exampleRadiossea1">
+                                        حكم
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <!--officier d'etat civil--> 
+                    <div>
+                        <div class="card">
+                                <h5 class="card-header bg-gray-300">
+                                    <span class="right float-end  fw-bold ">
+                                        : ضابط الحالة المدنية
+                                    </span> 
+                                </h5>
+                                <div class="card-body row">
+                                    <span class="col-md-2 fst-normal text-dark">Par noms :</span>
+                                    <input type="text " class="col-md-4 form-control w-75">
+                                    <input type="text " class="col-md-4 form-control">
+                                    <span class="col-md-2 float-end">: من طرفنا نحن</span>
+                                </div>
+                            </div>
+                    </div>
+
+                </div> 
+              
+                    
+                     <button class="btn btn-success m-2 float-end" style="font-size:24px"> 
+                        <i class="fa fa-save" ></i> <input type="submit" class=" btn float-end fw-bold text-white"  value="حفط"> 
+                    </button> 
+               
+           </div>
+      </div>
+      <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">LUNE CIVILE</div>
+            </a>
+
+
+
+
+            <li class="nav-item active ">
+                <a class="text-right nav-link" href="index.html">
+
+                    <span>الاستقبال</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <li class="nav-item text-right ">
+                <a class="text-right nav-link " href="#">
+                    الولادات
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item text-right ">
+                <a class="text-right nav-link " href="#">
+                    احكام الولادات
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item text-right ">
+                <a class="text-right nav-link " href="#">
+                    نقل التصاريح
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item text-right ">
+                <a class="text-right nav-link " href="#">
+                    الوفيات
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item text-right ">
+                <a class="text-right nav-link " href="#">
+                    احكام الوفيات
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item text-right ">
+                <a class="text-right nav-link " href="#">
+                    غير مسجلين
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item text-right ">
+                <a class="text-right nav-link " href="#">
+                    طباعة الإحصائيات
+                </a>
+            </li>
+
+
+        </ul>
+   </div>
+   
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="act.js"></script>
+    <script src="act.js"></script>
+
+</body>
+
+</html>
