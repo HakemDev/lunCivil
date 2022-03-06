@@ -90,8 +90,17 @@
                             <option value="attestation_mariage" class="fw-bold">
                                 بيان الزواج
                             </option>
+                            <option value="assurer_mariage" class="fw-bold">
+                                بيان ثبوت الزوجية
+                            </option>
                             <option value="deces_ne" class="fw-bold">
                                 بيان وفاة الزوج(ة)      
+                            </option>
+                            <option value="deces_pla" class="fw-bold">
+                                بيان وفاة و قعت في محل الولادة     
+                            </option>
+                            <option value="deces_no_pla" class="fw-bold">
+                                بيان وفاة و قعت في غير محل الولادة     
                             </option>
                     </select> 
              </div>
@@ -111,18 +120,18 @@
                                     <label for="validationCustom02w3" class="form-label col-md-3">Publiée Le :</label>
                                     <label for="validationCustom02w4" class="form-label float-end col-md-3">: الصادر بتاريخ</label>
                             </div>
-                            <input type="date" class="dis form-control publie d-flex justify-content-center w-auto container attestation_mariage" id="validationCustom02w3" required disabled>                                          
+                            <input type="date" class="dis form-control publie d-flex justify-content-center divorce_acte w-auto container attestation_mariage deces_no_pla" id="validationCustom02w3" required disabled>                                          
                         </div>
                         <div class="col-md-3 pl-2 ml-4">
                             <label for="validationCustomw1" class="form-label ">Prenom :</label>
-                            <input type="text" class="form-control prenom_fr dis attestation_mariage divorce_acte" disabled id="validationCustomw1" required>
+                            <input type="text" class="form-control prenom_fr dis deces_no_pla deces_pla deces_ne attestation_mariage divorce_acte " disabled id="validationCustomw1" required>
                             <div class="valid-feedback">
                             Looks good!
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <label for="validationCustom02w2" class="form-label float-end">: الإسم الشخصي </label>
-                            <input type="text" disabled class="form-control prenom_ar dis attestation_mariage divorce_acte" id="validationCustom02w2" required>
+                            <label for="validationCustom02w2" class="form-label float-end">: (صاحب الرسم)الإسم الشخصي </label>
+                            <input type="text" disabled class="form-control prenom_ar deces_no_pla dis deces_pla deces_ne attestation_mariage divorce_acte" id="validationCustom02w2" required>
                             <div class="valid-feedback">
                             Looks good!
                             </div>
@@ -130,28 +139,28 @@
                         
                         <div class="col-md-3">
                             <label for="validationCustom02w3" class="form-label fw-bold">Nom de mari/la femme :</label>
-                            <input type="text" disabled class="form-control mari_fr dis attestation_mariage deces_ne" id="validationCustom02w3" required>
+                            <input type="text" disabled class="form-control mari_fr dis attestation_mariage  divorce_acte deces_ne" id="validationCustom02w3" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label for="validationCustom02w4" class="form-label float-end fw-bold " >: إسم الزوج(ة)</label>
-                            <input type="text" disabled class="form-control mari_ar dis attestation_mariage deces_ne" id="validationCustom02w4"  required>
+                            <input type="text" disabled class="form-control mari_ar dis attestation_mariage deces_ne divorce_acte" id="validationCustom02w4"  required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label for="validationCustomw1" class="form-label ">Nom :</label>
-                            <input type="text" disabled class="form-control nom_fr dis attestation_mariage " id="validationCustomw1" required>
+                            <input type="text" disabled class="form-control nom_fr deces_no_pla  deces_pla deces_ne divorce_acte dis attestation_mariage " id="validationCustomw1" required>
                             <div class="valid-feedback">
                             Looks good!
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <label for="validationCustom02w2" class="form-label float-end fw-bold">: الإسم العائلي </label>
-                            <input type="text" disabled class="form-control nom_ar dis attestation_mariage " id="validationCustom02w2" required>
+                            <label for="validationCustom02w2" class="form-label float-end fw-bold">: (صاحب الرسم)الإسم العائلي </label>
+                            <input type="text" disabled class="form-control nom_ar dis deces_no_pla deces_ne deces_pla divorce_acte attestation_mariage " id="validationCustom02w2" required>
                             <div class="valid-feedback">
                             Looks good!
                             </div>
@@ -177,7 +186,7 @@
                                     <label for="validationCustom02w3" class="form-label col-md-6">Numéro :</label>
                                     <label for="validationCustom02w4" class="form-label float-end col-md-6 text-end ">: عدد</label>
                             </div>
-                            <input type="number" disabled class="form-control numero dis d-flex justify-content-center w-auto container deces_ne divorce_acte attestation_mariage" id="validationCustom02w3" required>                                          
+                            <input type="number" disabled class="form-control numero dis deces_no_pla deces_pla d-flex justify-content-center w-auto container deces_ne divorce_acte attestation_mariage" id="validationCustom02w3" required>                                          
                         </div>
                         <!--Ligne 4-->
                         <div class="col-md-6  mt-3 d-flex justify-content-between">
@@ -200,19 +209,19 @@
                                     <label for="validationCustom02w3" class="form-label col-md-6">Date de décés :</label>
                                     <label for="validationCustom02w4" class="form-label float-end col-md-6 text-end ">: تاريخ الوفاة</label>
                             </div>
-                            <input type="date" disabled class="form-control deces d-flex justify-content-center w-auto container deces_ne dis" id="validationCustom02w3" required>                                          
+                            <input type="date" disabled  class="form-control deces d-flex justify-content-center w-auto container deces_pla deces_ne dis" id="validationCustom02w3" required>                                          
                         </div>
                         <!--Ligne 5-->
                         <div class="col-md-3">
                             <label for="validationCustom02w3" class="form-label fw-bold">Commune :</label>
-                            <input type="text" disabled class="form-control commune_fr deces_ne dis" id="validationCustom02w3" required>
+                            <input type="text" disabled class="form-control commune_fr deces_pla deces_ne dis" id="validationCustom02w3" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <label for="validationCustom02w4" class="form-label float-end fw-bold commune_ar" >: جماعة</label>
-                            <input type="text" disabled class="form-control dis deces_ne" id="validationCustom02w4"  required>
+                            <label for="validationCustom02w4" class="form-label float-end fw-bold " >: جماعة</label>
+                            <input type="text" disabled class="form-control dis deces_pla deces_ne commune_ar" id="validationCustom02w4"  required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -261,7 +270,7 @@
                                     <label for="validationCustom02w3" class="form-label col-md-3">Rédiger Le :</label>
                                     <label for="validationCustom02w4" class="form-label float-end col-md-3 ">: تاريخ التحرير</label>
                             </div>
-                            <input type="date" disabled class="form-control rediger d-flex justify-content-center divorce_acte w-auto container dis deces_ne attestation_mariage" id="validationCustom02w3" required>                                          
+                            <input type="date" disabled class="form-control rediger d-flex justify-content-center deces_no_pla deces_pla divorce_acte w-auto container dis deces_ne attestation_mariage" id="validationCustom02w3" required>                                          
                         </div>
 
                     </div>
@@ -406,7 +415,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-    <script src="act.js"></script>
+
     <script src="marginale.js"></script>
 </body>
 

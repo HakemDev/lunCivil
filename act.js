@@ -32,4 +32,4 @@ let changer=(e)=>{
 }
 
 //declation events
-verifier.addEventListener('click', changer)
+verifier.addEventListener('click', changer);

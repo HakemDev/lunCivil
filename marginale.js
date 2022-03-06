@@ -37,6 +37,9 @@ let convertir=document.querySelector('.convertir');
 let manuelle=document.querySelector('.manue');
 let mar_mariage=document.querySelectorAll('.attestation_mariage');
 
+console.log(deces.value);
+ //text_ar.textContent=`توفي${1<2?1:2} `;
+  //text_ar.textContent=`توفي${''} زوج السيدة ${mari_ar.value} نن   `
 
 console.log(select)
  let name_class;
@@ -44,16 +47,52 @@ console.log(select)
 //construction function event
 let text_marginal=(e)=>
     {
+        let yea=deces.value.split('-');
+        let yea_fin=yea[0];
+
+        //بيان ثبوت الزوجية
+        if(name_class==='assurer_mariage')
+            {
+              
+                text_ar.textContent=
+                text_fr.textContent=`Confirmation de mariage n°${numero.value}.en date du……. transcrite au registre de conservationn°………………. Entre Mr (prénom et nom) et Mme ${prenom_fr.value} ${nom_fr.value} inscrite sur acte de naissance  nannée :2022.Commune de :${tribunal_fr.value}. Fait le :${rediger.value}. `
+            }
+
+        //بيان الزواج
         if(name_class==='attestation_mariage')
-            {console.log('hey')
-            text_ar.textContent=` تزوج ${prenom_ar.value} ب السيدة بمقتضى الرسم رقم ${numero.value} بتاريخ ${publie.value} المخاطب عليه من طرف قاضي المحكمة الإبتدائية ل ${tribunal_ar.value} حرر بتاريخ ${rediger.value} `;
-            text_fr.textContent=`Confirmation de mariage n°${numero.value}.endatedu…….
-                                    transcrite au registre de conservationn°………………..
-                                    Entre Mr (prénom et nom) et Mme ${prenom_fr.value} ${nom_fr.value}
-                                    inscrite sur acte de naissance
-                                    nannée :2022.Commune de :${tribunal_fr.value}.
-                                    Fait le :${rediger.value}.
-                                    ` 
+            {
+              
+                text_ar.textContent=` تزوج ${prenom_ar.value} ${nom_ar.value} ب السيدة${mari_ar.value} بمقتضى الرسم رقم ${numero.value} بتاريخ ${publie.value} المخاطب عليه من طرف قاضي المحكمة الإبتدائية ل ${tribunal_ar.value} حرر بتاريخ ${rediger.value} `;
+                text_fr.textContent=`Confirmation de mariage n°${numero.value}.en date du……. transcrite au registre de conservationn°………………. Entre Mr (prénom et nom) et Mme ${prenom_fr.value} ${nom_fr.value} inscrite sur acte de naissance  nannée :2022.Commune de :${tribunal_fr.value}. Fait le :${rediger.value}. `
+                console.log(deces.value);                    
+            }
+        //بيان طلاق عن طريق رسم
+        if(name_class==='divorce_acte')
+            {
+               text_fr.textContent=`Divorce de ${prenom_fr.value} ${nom_fr.value} de ${mari_fr.value} en vertu de l'acte de divorce n° ${numero.value} en date de: ${publie.value} Homologue par le juge chargé de (La section Notariale-famille) prés le tribunal de premiére instance de ${tribunal_fr.value} Fait-le ${rediger.value}`
+               text_ar.textContent=` طلاق  ${prenom_ar.value} ${nom_ar.value} من ${mari_ar.value}بناء على الرسم عدد ${numero.value} بتاريخ ${publie.value} . المخاطب عليه من طرف قاضي المحكمة الإبتدائية ل${tribunal_ar.value} . حرر بتاريخ ${rediger.value} `;
+            }
+
+        //بيان وفاة الزوج(ة)  
+        if(name_class==='deces_ne')
+            {
+                
+                text_ar.textContent=` توفي ${prenom_ar.value} ${nom_ar.value} زوج السيدة ${mari_ar.value} بتاريخ ${deces.value}  و المسجلة تحت عدد ${numero.value} بجماعة ${commune_ar.value} و حرر يوم ${rediger.value} `;
+
+            }
+
+        //بيان وفاة و قعت في محل الولادة     
+        if(name_class==='deces_pla')
+            {
+                text_fr.textContent=`${prenom_fr.value} ${nom_fr.value} est décédé en date du :${deces.value} à la commune ou ville de: ${commune_fr.value} Décés inscrit sous n°${numero.value} Année: ${yea_fin} Fait le: ${rediger.value}`
+                text_ar.textContent=` توفي ${prenom_ar.value} ${nom_ar.value} بتاريخ ${deces.value} بجماعة أو مدينة ${commune_ar.value} وقد سجلت وفاته تحت عدد ${numero.value} سنة ${yea_fin} و حرر بتاريخ ${rediger.value } موافق ${rediger.value}`;
+            }
+
+        //بيان وفاة و قعت في غير محل الولادة  
+        if(name_class==='deces_no_pla')
+            {
+                text_fr.textContent=`${prenom_fr.value } ${nom_fr.value} est décédé, et dont le décés est inscrit sous n°${numero.value} année ${yea_fin} La présents mention est consigné ensuite à l'avis qui nous parvenu en date du ${publie.value} de l'officier d'état civil de: ${''} Fait-le ${rediger.value}`;
+                text_ar.textContent=` توفي ${prenom_ar.value} ${nom_ar.value} و سجلت وفاته تحت عدد ${numero.value} سنة ${yea_fin} و ضعنا هدا البيان بناء على الإعلام الوارد علينا بتاريخ ${publie.value} موافق ${publie.value} من ضابط الحالة المدنية ل${'aa'} و حرر بتاريخ ${rediger.value} موافق ل ${''}`;
             }
         text_scroll.scrollIntoView({behavior:"smooth"});
     }
@@ -98,12 +137,15 @@ let ecrire=(e)=>{
 let changer_margina=function(e)
     {   
         text_ar.setAttribute('disabled','');
-         name_class=e.target.value;
+        name_class=e.target.value;
+        console.log(name_class);
+
         input.forEach(element => {
             element.removeAttribute('disabled');
             element.setAttribute("disabled",'')
            
         });
+
         //type mariage
         if(name_class === 'attestation_mariage')
             {
@@ -113,6 +155,7 @@ let changer_margina=function(e)
                 h1_fr.textContent=' déclaration Mariage';
                 })
             }
+
         // type divorce_acte
         if(name_class==='divorce_acte')
             {
@@ -127,13 +170,37 @@ let changer_margina=function(e)
         //type deces_ne
          if(name_class==='deces_ne')
             {
-               let divorce_acte=document.querySelectorAll('.deces_ne');
-               divorce_acte.forEach(ele=>{
+               let deces_ne=document.querySelectorAll('.deces_ne');
+               deces_ne.forEach(ele=>{
                    ele.removeAttribute('disabled');
                    h1_ar.textContent="بيان وفاة الزوج(ة)";
                    h1_fr.textContent="Déclaration de décès";
                }) 
             }
+            
+         //بيان وفاة و قعت في محل الولادة        
+         if(name_class==='deces_pla')
+            {
+               let deces_pla=document.querySelectorAll('.deces_pla');
+               deces_pla.forEach(ele=>{
+                   ele.removeAttribute('disabled');
+                   h1_ar.textContent="بيان وفاة و قعت في محل الولادة";
+                   h1_fr.textContent="Déclaration de décès";
+               }) 
+            } 
+            
+        
+         //بيان وفاة و قعت في غير محل الولادة     
+         if(name_class==='deces_no_pla')
+            {
+               let deces_no_pla=document.querySelectorAll('.deces_no_pla');
+               deces_no_pla.forEach(ele=>{
+                   ele.removeAttribute('disabled');
+                   h1_ar.textContent="بيان وفاة و قعت في محل الولادة";
+                   h1_fr.textContent="Déclaration de décès";
+               }) 
+            } 
+
         console.log(e.target.value);
         
 
