@@ -106,12 +106,18 @@
           </div>
           <div class=" pr-3 pl-3">
                 <!--Verifaction et imression-->
+                <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-warning mr-2 mb-2"> 
-                    <i class="fa fa-angle-double-left pr-2"></i>
-                    الرجوع إلى الإستقبال
+                                    <i class="fa fa-angle-double-left pr-2"></i>
+                                    الرجوع إلى الإستقبال
                 </a>
+                 <button class="btn fw-bold mr-2 manue" style="font-size:24px"> 
+                        <i class="fa fa-keyboard-o pr-2"></i>كتابة
+                        </button>
+                </div>
+               
                 <!--Information sur le registre-->
-                <div class="card ">
+                <div class="card " >
                         <div class="card-header fw-bold bg-gray-300">
                             <span class="right float-end  fw-bold">  :معلومات عن السجل </span> 
                         </div>
@@ -121,14 +127,11 @@
                                     <button class="btn btn-primary bg-success" type="submit"><i class="fas fa-search"></i> بحث </button>
                                 </div>
                                 
-                                    <input type="number" class="form-control col-md-2" id="validationCustom02" min="1" value="" required>
+                                    <input type="number" class="form-control col-md-2 num_actee" id="validationCustom02" required>
                                     <div class="valid-feedback">
                                     Looks good!
                                     </div>
-                                     <label for="validationCustom02" class="form-label float-end col-md-2">: رقم الرسم </label>
-
-                            
-                            
+                                    <label for="validationCustom02" class="form-label float-end col-md-2">: رقم الرسم </label>
                                     <select class="form-select col-md-2" id="validationCustom04" required>
                                         <option selected disabled value="">1</option>
                                         <option>2</option>
@@ -609,8 +612,19 @@
                     </div>
 
                 </div> 
+                <!--Acte manuelle texte  style="display: none;" -->
+                <div class="d-flex justify-content-between mb-2 ss mt-2" >
+                        <div class="col-md-6 pl-2">
+                                <label for="validationCustomw1" class="form-label fw-bold text_dec_fr">Acte En Francais :</label>
+                                <textarea  class="form-control mb-2 text_fr text-break text_dec_fr" id="exampleFormControlTextarea1" rows="6" disabled ></textarea>      
+                        </div>  
+                        <div class="col-md-6 pl-2">
+                            <label for="validationCustomw1" class="form-label float-end fw-bold"> : رسم بالعربية</label>
+                            <textarea  class="form-control mb-2 text_ar text-end text-break" id="exampleFormControlTextarea1" rows="6" disabled ></textarea>       
+                        </div> 
+                </div>
                <button class="btn btn-success m-2 float-end" style="font-size:24px"> 
-                        <i class="fa fa-save" ></i> <input type="submit" class=" btn float-end fw-bold text-white"  value="حفط"> 
+                        <i class="fa fa-save" ></i> <input type="submit" class=" btn float-end fw-bold text-white"  value="تسجيل"> 
                 </button> 
                 
            </div>
@@ -691,7 +705,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-    <script src="act.js"></script>
+    <script src="actt.js"></script>
 </body>
 
 </html>

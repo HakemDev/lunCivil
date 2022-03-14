@@ -37,6 +37,10 @@ let convertir=document.querySelector('.convertir');
 let manuelle=document.querySelector('.manue');
 let mar_mariage=document.querySelectorAll('.attestation_mariage');
 
+let btn_mdf=[...document.querySelectorAll('.modifier')];
+let text_modifier=document.querySelector('.text_modifier');
+let text_mo=document.querySelector('.text_mo');
+let text_type_mod=document.querySelector('.text_type_mod')
 console.log(deces.value);
  //text_ar.textContent=`توفي${1<2?1:2} `;
   //text_ar.textContent=`توفي${''} زوج السيدة ${mari_ar.value} نن   `
@@ -185,7 +189,7 @@ let changer_margina=function(e)
                deces_pla.forEach(ele=>{
                    ele.removeAttribute('disabled');
                    h1_ar.textContent="بيان وفاة و قعت في محل الولادة";
-                   h1_fr.textContent="Déclaration de décès";
+                   h1_fr.textContent="Mention de décès survenu au lieu de naissance ";
                }) 
             } 
             
@@ -196,8 +200,8 @@ let changer_margina=function(e)
                let deces_no_pla=document.querySelectorAll('.deces_no_pla');
                deces_no_pla.forEach(ele=>{
                    ele.removeAttribute('disabled');
-                   h1_ar.textContent="بيان وفاة و قعت في محل الولادة";
-                   h1_fr.textContent="Déclaration de décès";
+                   h1_ar.textContent="بيان وفاة و قعت في غير محل الولادة";
+                   h1_fr.textContent="Mention du décès survenu dans un lieu autre que celui de la naissance";
                }) 
             } 
 
@@ -206,9 +210,25 @@ let changer_margina=function(e)
 
     }
 
+let modifier=function(e){
+
+    let btn =e.target.closest('.modifier');
+    console.log('hey');
+    if(!btn) return;
+    
+    let ligne=document.querySelectorAll(`.text--${btn.dataset.tab}`);
+    console.log(ligne);
+    //console.log(text_modifier);
+    text_modifier.style.display='block';
+    text_type_mod.textContent=ligne[1].textContent;
+    text_mo.textContent=ligne[0].textContent;
+    text_mo.scrollIntoView({behavior:"smooth"});
+ 
+    }
 //declaration event
 select.addEventListener('change',changer_margina)
 convertir.addEventListener('click',text_marginal);
 manuelle.addEventListener('click',ecrire);
 let mariage='توفية الزوج(ة) بتاريخ ... و المسجلة وفاته(ا) تحت عدد بجماعة و حرر يوم ضابط الحالة المدنية بالتفويط ';
+btn_mdf.forEach(t=> t.addEventListener('click', modifier));
 

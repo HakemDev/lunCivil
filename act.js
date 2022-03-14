@@ -5,8 +5,6 @@ let impression=document.querySelector('.imprimer');
 let font=document.querySelector('.fontt');
 let font_ex=document.getElementById('faan');
 
-
-
 //contruire des fonctions events
 let changer=(e)=>{
     e.preventDefault();
@@ -30,6 +28,8 @@ let changer=(e)=>{
     
     
 }
+
+
 
 //declation events
 verifier.addEventListener('click', changer);

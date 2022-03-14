@@ -109,7 +109,7 @@
                 <div class="midd2 border rounded border-dark border-2 input_marginale div_mar m-1 mb-3">
                     <div class="d-flex justify-content-between">
                         <h3 class=" p-3 fw-bold text-success h1_fr"></h1>
-                        <h3 class="p-3 fw-bold text-success h1_ar"> </h1>
+                        <h3 class="p-3 fw-bold text-success h1_ar text-end"> </h1>
                     </div>
                     <div class="row g-3  needs-validation" >
                         <div class="col-md-6 row mt-3">
@@ -188,18 +188,18 @@
                         <!--Ligne 4-->
                         <div class="col-md-6  mt-3 d-flex justify-content-between">
                                 <div class="form-check ">
-                                    <input class="form-check-input genom dis" disabled type="radio" name="genome" id="genomo" value="لا" checked>
+                                    <input class="form-check-input genom dis" disabled type="radio" name="genome" id="genomo" value="female" checked>
                                     <label class="form-check-label" for="genomo">
-                                        لا
+                                       أنثى
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input genom dis" disabled type="radio" name="genome" id="genomn" value="نعم">
+                                    <input class="form-check-input genom dis" disabled type="radio" name="genome" id="genomn" value="male">
                                     <label class="form-check-label" for="genomn">
-                                        نعم
+                                        دكر
                                     </label>
                                 </div>
-                                <label for="validationCustom02" class="form-label">: توأم</label>                               
+                                <label for="validationCustom02" class="form-label">: جنس صاحب الرسم</label>                               
                         </div>
                         <div class="col-md-6 row mt-3">
                             <div class="d-flex justify-content-between">
@@ -309,29 +309,50 @@
                         <span class="float-end p-3">  نوع الهامش   </span>
                     </div> 
                     <hr>
+                    <!--ligne 2-->
                     <div class="col-md-2">
                         <button class="btn fw-bold flo" style='font-size:27px;'> 
                                 <i class='fas fa-trash-alt' style='font-size:27px;color: orange;'></i> 
+                        </button>
+                        <button class="btn fw-bold modifier" style='font-size:27px;' data-tab="1">
+                                     <i class="fas fa-pen-alt" style="color: rgb(44, 125, 179); font-size:27px;" ></i>                                             
                         </button> 
                     </div>
                     <div class="col-md-8">
-                         <label class="float-end text-break text-end ">توفية الزوج(ة) بتاريخ ... و المسجلة وفاته(ا) تحت عدد بجماعة و حرر يوم ضابط الحالة المدنية بالتفويط </label>
+                        <!--text--(1)-->
+                         <label class="float-end text-break text-end text--1">توفية الزوج(ة) بتاريخ ... و المسجلة وفاته(ا) تحت عدد بجماعة و حرر يوم ضابط الحالة المدنية بالتفويط </label>
                     </div>
                     
                     <div class="col-md-2 ">
-                        <label class="float-end text-break text-end "> بيان الزواج</labe>
+                        <label class="float-end text-break text-end text--1"> بيان الزواج</labe>
                     </div> 
-
+                    <!--ligne 2-->
                     <div class="col-md-2 ">
-                              <button class="btn fw-bold" style='font-size:27px;'> <i class='fas fa-trash-alt' style='font-size:27px;color: orange;'></i> </button> 
+                              <button class="btn fw-bold" style='font-size:27px;'>
+                                     <i class='fas fa-trash-alt' style='font-size:27px;color: orange;'></i> 
+                              </button> 
+                              <button class="btn fw-bold modifier" style='font-size:27px;' data-tab="2">
+                                     <i class="fas fa-pen-alt" style="color: rgb(44, 125, 179); font-size:27px;" value dataset ></i>                     
+                              </button>
                     </div>
                     <div class="col-md-8">
-                         <label class="float-end  text-end text-break">مممممممممممممممممتوفية الزوج(ة) بتاريخ ... و المسجلة وفاته(ا) تحت عدد بجماعة و حرر يوم ضابط الحالة المدنية بالتفويط </label>
+                         <label class="float-end  text-end text-break text--2">مممممممممممممممممتوفية الزوج(ة) بتاريخ ... و المسجلة وفاته(ا) تحت عدد بجماعة و حرر يوم ضابط الحالة المدنية بالتفويط </label>
                     </div>
                     <div class="col-md-2 ">
-                        <label class="float-end text-break text-end "> بيان الزواج</label>                    
+                        <label class="float-end text-break text-end text--2"> بيان الزواج</label>                    
                     </div> 
                 </div>
+                <div class="mt-2 row text_modifier" style="display: none;">
+                    <label for="validationCustomw1" class="form-label text-center fw-bold text_type_mod">  بيان بالعربية</label>
+                    <textarea  class="form-control mb-2 text_mo text-end text-break" id="exampleFormControlTextarea1" rows="6" ></textarea>       
+                    <div class="d-flex justify-content-center mt-2">
+                        <button class="btn btn-success fw-bold modifier" style='font-size:27px;' data-tab="2">
+                                        حفط                     
+                        </button>
+                    </div>
+                </div> 
+                
+                
             </div>
             
        </div>
